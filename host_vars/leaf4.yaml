@@ -30,5 +30,5 @@ interfaces:
   interface: Vlan4091
   mask: /31
 loopback0_ip: 10.0.250.14
-loopback1_ip: 10.0.255.14
+loopback1_ip: 10.0.255.12
 side: right
