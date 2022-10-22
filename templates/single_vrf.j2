@@ -4,6 +4,7 @@ ip routing vrf {{ vrf_name }}
 router bgp {{ asn }}
    vrf {{ vrf_name }}
       rd {{ loopback0_ip }}:{{ vrf_id }}
+      router-id {{ loopback0_ip }}
       route-target import evpn {{ vrf_id }}:{{ vrf_id|int + 100000 }}
       route-target export evpn {{ vrf_id }}:{{ vrf_id|int + 100000 }}
       redistribute connected
